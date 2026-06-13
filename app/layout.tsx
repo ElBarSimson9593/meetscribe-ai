@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "MeetScribe AI — Minutas automáticas con Gemini",
   description:
-    "Sube audio de reuniones o clases y genera transcripción y minuta estructurada con Gemini API.",
+    "Convierte audios de reuniones o clases en transcripción y minuta con Gemini. MVP probado con clips de 30 s–3 min; hasta 20 MB por archivo.",
 };
 
 export default function RootLayout({

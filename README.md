@@ -2,6 +2,8 @@
 
 Web app para convertir **audios de reuniones o clases** en **transcripción** y **minuta estructurada** usando **Gemini API** (free tier — $0).
 
+Pensada para ese tipo de contenido; el MVP acepta archivos de **cualquier duración hasta 20 MB** y fue **validado con clips de prueba de 30 s a 3 min** (ideal para demos y cuota free tier).
+
 > Proyecto de portafolio — Next.js · TypeScript · Tailwind · Google Gemini
 
 ## Qué hace
@@ -57,8 +59,21 @@ Respuesta:
 
 ## Límites MVP
 
-- Máximo **20 MB** por archivo
-- Free tier Gemini: si ves error 429, espera al reset diario de cuota
+- Máximo **20 MB** por archivo (sin límite mínimo de duración)
+- **Pruebas del MVP:** clips de 30 s–3 min; audios más largos son posibles pero consumen más cuota de Gemini
+- Free tier Gemini: si ves error 429, espera al reset diario de cuota o usa un audio más corto
+
+## Portafolio (Emplea INACAP)
+
+Copia esto al crear el ítem en [emplea.inacap.cl/account/portafolio](https://emplea.inacap.cl/account/portafolio):
+
+**Título:** MeetScribe AI
+
+**URL:** https://github.com/ElBarSimson9593/meetscribe-ai
+
+**Descripción:**
+
+> Web app Next.js que convierte audios de reuniones o clases en transcripción y minuta estructurada (Markdown) usando Gemini API en free tier. Incluye upload de audio, generación de resumen/compromisos/decisiones y descarga del resultado. MVP validado con clips de 30 s–3 min; soporta archivos mayores hasta 20 MB.
 
 ## Autor
 

@@ -33,10 +33,16 @@ Web app Next.js que recibe audio, usa **Gemini API** (free tier) para transcribi
 
 ## Criterios de aceptación
 
-1. Subir audio de prueba genera transcripción y minuta.
+1. Subir audio de prueba (clip 30 s–3 min) genera transcripción y minuta.
 2. Descarga Markdown funciona.
 3. Error claro si falta `GEMINI_API_KEY` o límite 429.
 4. README con instrucciones locales.
+
+## Validación
+
+- Caso de uso: reuniones o clases (contenido hablado con puntos y compromisos).
+- Pruebas del MVP: clips cortos (30 s–3 min) por cuota free tier; límite técnico 20 MB por archivo.
+- No se afirma procesamiento de reuniones completas de larga duración en esta versión.
 
 ## Variables
 

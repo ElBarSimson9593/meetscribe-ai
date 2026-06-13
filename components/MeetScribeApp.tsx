@@ -71,8 +71,10 @@ export default function MeetScribeApp() {
           Audio → transcripción → minuta
         </h1>
         <p className="max-w-2xl text-zinc-400">
-          Sube un audio de reunión o clase. Gemini transcribe y genera una minuta
-          estructurada. $0 con free tier de Google AI.
+          Pensado para audios de reuniones o clases. Sube un clip (recomendado
+          1–3 min para pruebas) o un archivo mayor, hasta 20 MB. Gemini
+          transcribe y genera una minuta estructurada. $0 con free tier de Google
+          AI.
         </p>
       </header>
 
@@ -83,6 +85,10 @@ export default function MeetScribeApp() {
         <label className="block text-sm font-medium text-zinc-300">
           Archivo de audio (MP3, WAV, M4A — máx. 20 MB)
         </label>
+        <p className="mt-1 text-xs text-zinc-500">
+          Para probar el MVP, un clip de 1–3 min suele dar mejores minutas que
+          30 s.
+        </p>
         <input
           type="file"
           accept="audio/*,.mp3,.wav,.m4a,.webm,.ogg"
