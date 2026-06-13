@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MeetScribe AI
 
-## Getting Started
+Web app para convertir **audios de reuniones o clases** en **transcripción** y **minuta estructurada** usando **Gemini API** (free tier — $0).
 
-First, run the development server:
+> Proyecto de portafolio — Next.js · TypeScript · Tailwind · Google Gemini
+
+## Qué hace
+
+1. Subes un archivo de audio (MP3, WAV, M4A…).
+2. Gemini transcribe el contenido al español.
+3. Gemini genera una minuta Markdown con resumen, puntos, compromisos y decisiones.
+4. Descargas el resultado como `.md`.
+
+## Demo local
 
 ```bash
+cp .env.example .env.local
+# Pega tu GEMINI_API_KEY de https://aistudio.google.com/apikey
+
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre **http://localhost:3000**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Variables de entorno
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Variable | Descripción |
+|----------|-------------|
+| `GEMINI_API_KEY` | API key de Google AI Studio |
 
-## Learn More
+## API
 
-To learn more about Next.js, take a look at the following resources:
+```http
+POST /api/meetscribe
+Content-Type: multipart/form-data
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+audio: <archivo>
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Respuesta:
 
-## Deploy on Vercel
+```json
+{
+  "fileName": "reunion.mp3",
+  "transcription": "...",
+  "minutes": "# Minuta de reunión\n...",
+  "model": "gemini-2.0-flash"
+}
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js App Router
+- Tailwind CSS
+- `@google/generative-ai` (Gemini 2.0 Flash)
+
+## Límites MVP
+
+- Máximo **20 MB** por archivo
+- Free tier Gemini: si ves error 429, espera al reset diario de cuota
+
+## Autor
+
+**Osvaldo Andrés Díaz Guzmán** — Estudiante Ing. en Informática INACAP · Backend e IA aplicada
+
+## Proyecto relacionado
+
+[SentimentTrend Bot](https://github.com/ElBarSimson9593/sentiment-trend-bot) — API FastAPI de monitoreo de reputación con IA
