@@ -47,7 +47,7 @@ Respuesta:
   "fileName": "reunion.mp3",
   "transcription": "...",
   "minutes": "# Minuta de reunión\n...",
-  "model": "gemini-2.0-flash"
+  "model": "gemini-2.5-flash"
 }
 ```
 
@@ -55,7 +55,7 @@ Respuesta:
 
 - Next.js App Router
 - Tailwind CSS
-- `@google/generative-ai` (Gemini 2.0 Flash)
+- `@google/generative-ai` (Gemini 2.5 Flash)
 
 ## Límites MVP
 

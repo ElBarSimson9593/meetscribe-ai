@@ -29,7 +29,7 @@ Web app Next.js que recibe audio, usa **Gemini API** (free tier) para transcribi
 
 - Next.js 16, TypeScript, Tailwind CSS
 - `@google/generative-ai`
-- Modelo: `gemini-2.0-flash`
+- Modelo: `gemini-2.5-flash`
 
 ## Criterios de aceptación
 

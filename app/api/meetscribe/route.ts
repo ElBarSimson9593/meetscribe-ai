@@ -82,9 +82,22 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         {
           error:
-            "Límite diario de Gemini alcanzado. Intenta mañana o usa un audio más corto.",
+            "Límite de Gemini alcanzado (cuota o modelo). Revisa AI Studio o intenta más tarde.",
         },
         { status: 429 }
+      );
+    }
+
+    if (
+      message.toLowerCase().includes("not found") ||
+      message.toLowerCase().includes("deprecated") ||
+      message.toLowerCase().includes("shut down")
+    ) {
+      return NextResponse.json(
+        {
+          error: `Modelo no disponible: ${message}`,
+        },
+        { status: 503 }
       );
     }
 

@@ -1,4 +1,4 @@
-export const GEMINI_MODEL = "gemini-2.0-flash";
+export const GEMINI_MODEL = "gemini-2.5-flash";
 
 export const MAX_AUDIO_BYTES = 20 * 1024 * 1024; // 20 MB
 
