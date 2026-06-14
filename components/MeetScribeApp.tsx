@@ -52,11 +52,14 @@ export default function MeetScribeApp() {
 
   function downloadMarkdown() {
     if (!result) return;
-    const blob = new Blob([result.minutes], { type: "text/markdown" });
+    const isMinutes = tab === "minutes";
+    const content = isMinutes ? result.minutes : result.transcription;
+    const prefix = isMinutes ? "minuta" : "transcripcion";
+    const blob = new Blob([content], { type: "text/markdown;charset=utf-8" });
     const url = URL.createObjectURL(blob);
     const anchor = document.createElement("a");
     anchor.href = url;
-    anchor.download = `minuta-${result.fileName.replace(/\.[^.]+$/, "")}.md`;
+    anchor.download = `${prefix}-${result.fileName.replace(/\.[^.]+$/, "")}.md`;
     anchor.click();
     URL.revokeObjectURL(url);
   }
@@ -146,7 +149,7 @@ export default function MeetScribeApp() {
               onClick={downloadMarkdown}
               className="rounded-lg border border-zinc-700 px-3 py-1.5 text-sm text-zinc-200 hover:bg-zinc-800"
             >
-              Descargar .md
+              {tab === "minutes" ? "Descargar minuta .md" : "Descargar transcripción .md"}
             </button>
           </div>
 
