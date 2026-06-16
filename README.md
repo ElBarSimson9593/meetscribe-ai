@@ -65,15 +65,27 @@ Respuesta:
 
 ## Evidencia de demo
 
-Prueba local con clip educativo (~2 min) — `QUÉ ES EL ÁLGEBRA_ Super facil - Para principiantes.mp3` — modelo `gemini-2.5-flash`.
+Demostración con clip educativo (~2 min) procesado con **gemini-2.5-flash**.
 
-![Selección de audio](docs/evidence/screenshots/01-upload.png)
+Índice completo: [docs/evidence/README.md](docs/evidence/README.md) · Salida textual: [sample-demo-algebra.md](docs/evidence/sample-demo-algebra.md)
 
-![Minuta generada](docs/evidence/screenshots/02-minuta.png)
+### 1. Subir audio
 
-![Transcripción](docs/evidence/screenshots/03-transcripcion.png)
+Formulario principal: el usuario selecciona un MP3 y dispara el análisis con Gemini.
 
-- Salida textual: [docs/evidence/sample-demo-algebra.md](docs/evidence/sample-demo-algebra.md)
+![Pantalla inicial — audio seleccionado y listo para analizar](docs/evidence/screenshots/01-upload.png)
+
+### 2. Minuta generada
+
+Resultado estructurado en Markdown: resumen, puntos tratados, compromisos y decisiones.
+
+![Vista Minuta — resumen y secciones de la reunión/clase](docs/evidence/screenshots/02-minuta.png)
+
+### 3. Transcripción completa
+
+Texto literal del audio, con opción de descargar como `.md`.
+
+![Vista Transcripción — texto completo del clip de prueba](docs/evidence/screenshots/03-transcripcion.png)
 
 ## Autor
 
