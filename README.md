@@ -4,7 +4,7 @@ Web app para convertir **audios de reuniones o clases** en **transcripción** y 
 
 Pensada para ese tipo de contenido; el MVP acepta archivos de **cualquier duración hasta 20 MB** y fue **validado con clips de prueba de 30 s a 3 min** (ideal para demos y cuota free tier).
 
-> Proyecto de portafolio — Next.js · TypeScript · Tailwind · Google Gemini
+> Next.js · TypeScript · Tailwind · Google Gemini
 
 ## Qué hace
 
@@ -61,23 +61,23 @@ Respuesta:
 
 - Máximo **20 MB** por archivo (sin límite mínimo de duración)
 - **Pruebas del MVP:** clips de 30 s–3 min; audios más largos son posibles pero consumen más cuota de Gemini
-- Free tier Gemini: si ves error 429, espera al reset diario de cuota o usa un audio más corto
+- Free tier Gemini: usa un modelo activo (`gemini-2.5-flash`); modelos deprecados pueden fallar con errores confusos
 
-## Portafolio (Emplea INACAP)
+## Evidencia de demo
 
-Copia esto al crear el ítem en [emplea.inacap.cl/account/portafolio](https://emplea.inacap.cl/account/portafolio):
+Prueba local con clip educativo (~2 min) — `QUÉ ES EL ÁLGEBRA_ Super facil - Para principiantes.mp3` — modelo `gemini-2.5-flash`.
 
-**Título:** MeetScribe AI
+![Selección de audio](docs/evidence/screenshots/01-upload.png)
 
-**URL:** https://github.com/ElBarSimson9593/meetscribe-ai
+![Minuta generada](docs/evidence/screenshots/02-minuta.png)
 
-**Descripción:**
+![Transcripción](docs/evidence/screenshots/03-transcripcion.png)
 
-> Web app Next.js que convierte audios de reuniones o clases en transcripción y minuta estructurada (Markdown) usando Gemini API en free tier. Incluye upload de audio, generación de resumen/compromisos/decisiones y descarga del resultado. MVP validado con clips de 30 s–3 min; soporta archivos mayores hasta 20 MB.
+- Salida textual: [docs/evidence/sample-demo-algebra.md](docs/evidence/sample-demo-algebra.md)
 
 ## Autor
 
-**Osvaldo Andrés Díaz Guzmán** — Estudiante Ing. en Informática INACAP · Backend e IA aplicada
+**Osvaldo Andrés Díaz Guzmán** — Backend e IA aplicada
 
 ## Proyecto relacionado
 
