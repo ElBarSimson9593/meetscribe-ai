@@ -1,5 +1,7 @@
 # Evidencia de demo — MeetScribe AI
 
+**Demo en vivo:** [meetscribe-ai-nu.vercel.app](https://meetscribe-ai-nu.vercel.app)
+
 Prueba local con clip educativo (~2 min).
 
 | Campo | Valor |

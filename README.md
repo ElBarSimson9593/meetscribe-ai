@@ -4,6 +4,9 @@ Web app para convertir **audios de reuniones o clases** en **transcripción** y 
 
 Pensada para ese tipo de contenido; el MVP acepta archivos de **cualquier duración hasta 20 MB** y fue **validado con clips de prueba de 30 s a 3 min** (ideal para demos y cuota free tier).
 
+**Demo en vivo:** [meetscribe-ai-nu.vercel.app](https://meetscribe-ai-nu.vercel.app)  
+**Repositorio:** [github.com/ElBarSimson9593/meetscribe-ai](https://github.com/ElBarSimson9593/meetscribe-ai)
+
 > Next.js · TypeScript · Tailwind · Google Gemini
 
 ## Qué hace
@@ -12,6 +15,12 @@ Pensada para ese tipo de contenido; el MVP acepta archivos de **cualquier duraci
 2. Gemini transcribe el contenido al español.
 3. Gemini genera una minuta Markdown con resumen, puntos, compromisos y decisiones.
 4. Descargas el resultado como `.md`.
+
+## Demo en vivo
+
+Prueba la app desplegada en Vercel (requiere `GEMINI_API_KEY` configurada en el proyecto):
+
+**[https://meetscribe-ai-nu.vercel.app](https://meetscribe-ai-nu.vercel.app)**
 
 ## Demo local
 
