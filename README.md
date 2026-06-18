@@ -9,6 +9,8 @@ Pensada para ese tipo de contenido; el MVP acepta archivos de **cualquier duraci
 
 > Next.js · TypeScript · Tailwind · Google Gemini
 
+![MeetScribe AI — subir audio y generar minuta](docs/evidence/screenshots/01-upload.png)
+
 ## Qué hace
 
 1. Subes un archivo de audio (MP3, WAV, M4A…).
