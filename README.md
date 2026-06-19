@@ -66,6 +66,20 @@ Respuesta:
 - Tailwind CSS
 - `@google/generative-ai` (Gemini 2.5 Flash)
 
+## Arquitectura
+
+```mermaid
+flowchart LR
+  A[Audio MP3/WAV] --> B[Next.js UI]
+  B --> C[/api/meetscribe]
+  C --> D[Gemini 2.5 Flash]
+  D --> E[Transcripción + Minuta]
+  E --> B
+  B --> F[Descarga .md]
+```
+
+Documento de requisitos: [docs/PRD.md](docs/PRD.md)
+
 ## Límites MVP
 
 - Máximo **20 MB** por archivo (sin límite mínimo de duración)
