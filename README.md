@@ -70,12 +70,12 @@ Respuesta:
 
 ```mermaid
 flowchart LR
-  A[Audio MP3/WAV] --> B[Next.js UI]
-  B --> C[/api/meetscribe]
-  C --> D[Gemini 2.5 Flash]
-  D --> E[Transcripción + Minuta]
+  A["Audio MP3/WAV"] --> B["Next.js UI"]
+  B --> C["POST /api/meetscribe"]
+  C --> D["Gemini 2.5 Flash"]
+  D --> E["Transcripción + Minuta"]
   E --> B
-  B --> F[Descarga .md]
+  B --> F["Descarga .md"]
 ```
 
 Documento de requisitos: [docs/PRD.md](docs/PRD.md)
