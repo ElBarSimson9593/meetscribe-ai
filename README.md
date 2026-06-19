@@ -20,7 +20,7 @@ Pensada para ese tipo de contenido; el MVP acepta archivos de **cualquier duraci
 
 ## Demo en vivo
 
-Prueba la app desplegada en Vercel (requiere `GEMINI_API_KEY` configurada en el proyecto):
+La demo en Vercel requiere `GEMINI_API_KEY` configurada en el proyecto:
 
 **[https://meetscribe-ai-nu.vercel.app](https://meetscribe-ai-nu.vercel.app)**
 
@@ -28,13 +28,13 @@ Prueba la app desplegada en Vercel (requiere `GEMINI_API_KEY` configurada en el 
 
 ```bash
 cp .env.example .env.local
-# Pega tu GEMINI_API_KEY de https://aistudio.google.com/apikey
+# GEMINI_API_KEY desde https://aistudio.google.com/apikey
 
 npm install
 npm run dev
 ```
 
-Abre **http://localhost:3000**
+Servidor local: **http://localhost:3000**
 
 ## Variables de entorno
 
